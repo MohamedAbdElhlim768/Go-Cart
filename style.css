@@ -1,0 +1,346 @@
+    :root {
+    --primary-color:#28a745;
+    --color-font:#ddd;
+    --bg-body:#f6f6f6;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --color-hover:cadetblue;
+    }
+
+    /* ========== Reset ========== */
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    a {
+    text-decoration: none;
+    color: var(--color-font);
+    }
+    body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    font-size: 1rem;
+    }
+
+    /* ========== Navbar ========== */
+    .navbar {
+    box-shadow: var(--box-shadow);
+    }
+
+    .navbar-brand img {
+    max-width: 120px;
+    height: auto;
+    }
+
+    .link i {
+    color: var(--color-hover);
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.25rem;
+    }
+
+    .link {
+    font-size: 1.25rem;
+    }
+    .link li {
+    margin-left: 1.25rem;
+    }
+
+    input[type="search"] {
+    border-radius: 25px;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    button {
+    border-radius: 25px;
+    }
+    .form-control {
+    width: 25rem;
+    height: 3.125rem;
+    max-width: 100%;
+    }
+    .search {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease;
+    }
+    .search i {
+    color: var(--bg-body);
+    }
+    .search:hover {
+    background-color:var(--color-hover);
+    }
+    .nav-link {
+    position: relative;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 1.5625rem;
+    color: #333;
+    transition: color 0.3s ease;
+    overflow: hidden; /* عشان الحدود متطلعش برا */
+    }
+
+    .nav-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--primary-color);
+    border-radius: 1.5625rem;
+    transform: scale(0.8); /* صغير شوية في البداية */
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-link:hover {
+    color: var(--primary-color);
+    }
+
+    .nav-link:hover::before {
+    opacity: 1;
+    transform: scale(1); /* يكبر للـ size الطبيعي */
+    }
+
+    .active {
+    border: 0.125rem solid var(--primary-color); 
+    border-radius: 1.5625rem;
+    }
+
+    /* ========== Hero Section ========== */
+    .hero-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/photo_2025-09-06_14-00-41.jpg);
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    position: relative;
+    }
+    .hero-section .item {
+    position: absolute;
+    bottom: 40%;
+    max-width: 30%;
+    padding: 0 1rem;
+    }
+    .item h1 {
+    font-weight: 700;
+    font-size:3.75rem;
+    }
+    .item p {
+    font-weight: 500;
+    font-size: 1.4375rem;
+    }
+    .item button {
+    background-color: var(--primary-color);
+    color: var(--color-font);
+    padding: 0.5rem 1.25rem;
+    }
+    .item button:hover {
+    background-color: var(--color-hover);
+    }
+
+    /* ========== Products ========== */
+    .items {
+    background: var(--bg-body);
+    border: 1px solid var(--color-font);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .items img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    }
+    .items h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+    }
+    .items p {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    }
+    .items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ========== Footer ========== */
+    footer {
+    color: var(--color-font);
+    }
+    .footer {
+    padding: 40px 2rem;
+    background-color: #000;
+    }
+    .footer h3, .footer h4 {
+    color: var(--color-font);
+    margin-bottom: 20px;
+    }
+    .footer p {
+    color: #bbb;
+    line-height: 1.6;
+    }
+    .footer-links ul {
+    list-style: none;
+    padding: 0;
+    }
+    .footer-links ul li {
+    margin-bottom: 10px;
+    }
+    .footer-links ul li a {
+    color: #bbb;
+    transition: color 0.3s ease;
+    }
+    .footer-links ul li a:hover {
+    color: var(--color-hover);
+    }
+    .footer-social .social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    }
+    .footer-social .social-icons i:hover {
+    color: var(--color-hover);
+    }
+    .footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    margin-top: 20px;
+    color: #777;
+    text-align: center;
+    }
+
+    /* ========== Contact ========== */
+    .section-contact {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .section-contact form {
+    max-width: 400px;
+    width: 100%;
+    }
+    .section-contact form input,
+    .section-contact form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    background-color:#f9f9f9;
+    border: 1px solid #bbb;
+    color: #000;
+    padding: 10px;
+    }
+    .section-contact form button {
+    background-color: var(--primary-color);
+    color: var(--color-font);
+    padding: 10px 17px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    }
+
+    /* ========== Login/Register ========== */
+    .layout {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 17px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .login h2 {
+    padding: 15px 0;
+    font-weight: 600;
+    }
+    .login form input,
+    .login form button {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid #bbb;
+    }
+    .login form button {
+    background-color: #28a745;
+    color: var(--color-font);
+    border: none;
+    }
+    .login form a {
+    color: var(--color-hover);
+    }
+
+    /* ========== Loader ========== */
+    #loader {
+    display:none;
+    position:fixed;
+    top:0; left:0; 
+    width:100%; height:100%;
+    background:#fff;
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+    }
+
+    /* ========== Responsive Fixes ========== */
+    @media (max-width: 768px) {
+    .form-control {
+        width: 100%;
+    }
+    .hero-section .item {
+        max-width: 80%;
+        bottom: 30%;
+    }
+    .item h1 {
+        font-size: 2rem;
+    }
+    .item p {
+        font-size: 1rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+    }
+    /* النافبار ميكسرش العرض */
+    .navbar .container-fluid {
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
+
+    /* السيرش يبقى أصغر ومتجاوب */
+    .form-control {
+        width: 100%;
+        max-width: 220px;   /* كان 300px، صغّرته */
+        height: 2.5rem;     /* بدل 3.125rem */
+        font-size: 0.9rem;
+    }
+
+    /* زرار البحث */
+    .search {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* اللوجو */
+    a img {
+        width: 6.5rem;  /* كان 8rem */
+        max-width: 100%;
+    }
+
+    /* اللينكات */
+    .link {
+        font-size: 1.1rem;  /* كان 1.25rem */
+    }
+    .link li {
+        margin-left: 0.6rem; /* كان 1.25rem */
+    }
+
+
